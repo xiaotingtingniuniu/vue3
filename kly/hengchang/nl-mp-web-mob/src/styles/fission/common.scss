@@ -1,0 +1,85 @@
+.fx {
+    display: flex;
+}
+
+.fx-1 {
+    flex: 1;
+}
+
+.j-s-c {
+    justify-content: center;
+}
+
+.a-l-c {
+    align-items: center;
+}
+
+.j-c-s-a {
+    justify-content: space-around;
+}
+
+.btn-d-5 {
+    opacity: .49;
+}
+
+.btn-d-6 {
+    opacity: .6;
+}
+.fission-card {
+    position: relative;
+    margin: 30px auto 0;
+    z-index: 0;
+    width: 710px;
+    background: linear-gradient(90deg, #FFF4E6 0%, #FFD3A7 100%);
+    box-shadow: 0px 5px 13px 0px #FE8029, 0px 1px 3px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    border: 2px solid #FFFDE9;
+}
+
+.fission-card::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 698px;
+    height: calc(100% - 12px);
+    background: linear-gradient(90deg, #FFFCF8 0%, #FFF5E9 100%);
+    border-radius: 30px;
+    border: 1px solid #FFD0BA;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.fission-card-title {
+    margin-left: 50%;
+    margin-top: 6px;
+    transform: translateX(-50%);
+    width: 314px;
+    height: 66px;
+    text-align: center;
+    font-size: 32px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #7C3312;
+    line-height: 66px;
+    background: linear-gradient(90deg, #FFE6D4 0%, #FECF8D 100%);
+    border-radius: 0px 0px 36px 36px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.fission-empty {
+    margin: 68px auto;
+    text-align: center;
+    font-size: 32px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #7C3312;
+    line-height: 45px;
+}

@@ -1,0 +1,99 @@
+// 全局公共样式
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    not supported by any browser */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+}
+.van-nav-bar .van-icon{
+    color: #212034 !important;
+}
+.van-nav-bar__title{
+    font-size: 34px !important;
+    font-weight: bold !important;
+    color: #222222 !important;
+    line-height: 48px;
+}
+.icon--unselect{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon--unselect::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.van-sidebar-item--select:before{
+    width: 6px !important;
+    height: 40px !important;
+    background-color: initial !important;
+    background-image: url('../assets/menu/矩形@2x.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.van-tab--active{
+    font-weight: bold !important;
+}
+
+.font-din{
+    font-family: 'DIN Alternate Bold';
+    margin-left: 2px;
+}
+
+.common-search-bar{
+    display: flex;
+    align-items: center;
+    height: 72px;
+    background: #F2F2F2;
+    border-radius: 36px;
+    .button-content{
+        background-color: initial;
+        font-size: 26px;
+        font-weight: 400;
+        color: #222222;
+        width: max-content;
+        height: max-content;
+        display: flex;
+        padding-left: 32px;
+        .icon--unselect{
+            font-size: 18px;
+            margin-left: 16px;
+            margin-right: 18px;
+        }
+    }
+    .div-input{
+        display: flex;
+        align-items: center;
+        border-left: 1px solid #D3D3D3;
+        color: #B6B6B8;
+        .van-icon{
+            font-size: 32px;
+            margin-right: 14px;
+            margin-left: 23px;
+            margin-top: 4px;
+        }
+    }
+}

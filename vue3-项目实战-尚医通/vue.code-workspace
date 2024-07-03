@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Downloads/尚硅谷 vue3实战尚医通/syt/syt"
+		}
+	],
+	"settings": {
+		"vetur.format.defaultFormatterOptions": {
+			"js-beautify-html": {
+				"wrap_attributes": "force-expand-multiline"
+			},
+			"prettyhtml": {
+				"printWidth": 100,
+				"singleQuote": false,
+				"wrapAttributes": false,
+				"sortAttributes": false
+			}
+		},
+		"typescript.tsdk": "node_modules/typescript/lib"
+	}
+}

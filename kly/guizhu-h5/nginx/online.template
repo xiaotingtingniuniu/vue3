@@ -1,0 +1,56 @@
+server {
+  listen            ${LISTEN};
+  server_name       ${SERVER_NAME};
+  error_page        405 =200 $uri;
+  index index.html  index.htm;
+  error_log         /opt/logs/${LOG_PATH}/error_${SERVER_NAME}.log;
+  access_log        /opt/logs/${LOG_PATH}/access_${SERVER_NAME}.log;
+  add_header        Access-Control-Allow-Origin *;
+  root              ${ROOT};
+
+  location / {
+    try_files       $uri $uri/ /index.html;
+  }
+    location ^~ /hzgApi/ {
+     proxy_pass         http://hsh-guizhu-api.pbsk8s.hcinner/hsh-guizhu-api/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /hcpdf/ {
+     proxy_pass         https://pbsrgw.hengchang6.com/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /hshpdf/ {
+     proxy_pass         https://hsh-native-life-test-1309143854.cos.ap-beijing.myqcloud.com/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /fsApi/ {
+     proxy_pass         https://filesys.hengchang6.com/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /v1/ {
+     proxy_pass         http://customers-api.pbsk8s.hcinner/api/yzt/v1/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /wx-api/ {
+     proxy_pass         https://api.weixin.qq.com/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+  location ^~ /trackingApi/ {
+     proxy_pass         https://tracking.hengshenghuo.com/;
+     proxy_set_header   Host $proxy_host;
+     proxy_set_header   X-Real-IP       $remote_addr;
+     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}

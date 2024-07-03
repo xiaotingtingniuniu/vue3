@@ -1,0 +1,28 @@
+// 全局公共样式
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.el-message__content{
+    font-size: 14px !important;
+    margin-right: 12px !important;
+    font-weight: 700 !important;
+    color: #161823 !important;
+}
+.el-message{
+    min-width: max-content !important;
+    text-align: left !important;
+}
