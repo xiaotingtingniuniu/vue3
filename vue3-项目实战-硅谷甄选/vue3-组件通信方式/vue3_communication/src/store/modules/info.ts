@@ -1,4 +1,4 @@
-//定义info小仓库
+//定义选项式API info小仓库
 import { defineStore } from "pinia";
 //第一个仓库:小仓库名字  第二个参数:小仓库配置对象
 //defineStore方法执行会返回一个函数,函数作用就是让组件可以获取到仓库数据
