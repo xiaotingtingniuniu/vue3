@@ -1,0 +1,4 @@
+{
+    "prettier.embeddedLanguageFormatting": "off",
+    "typescript.format.enable": false
+}
